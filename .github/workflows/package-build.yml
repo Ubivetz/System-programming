@@ -26,7 +26,7 @@ jobs:
         run: rpmbuild -ba ~/rpmbuild/SPECS/count-files.spec
 
       - name: Upload RPM artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: rpm-package
           path: ~/rpmbuild/RPMS/**/*.rpm
@@ -56,7 +56,7 @@ jobs:
         run: dpkg-deb --build count-files-1.0
 
       - name: Upload DEB artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: deb-package
           path: ./count-files-1.0.deb
