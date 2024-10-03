@@ -2,11 +2,9 @@ name: Build RPM and DEB Packages
 
 on:
   push:
-    branches:
-      - main
+    branches: [master, main]
   pull_request:
-    branches:
-      - main
+    branches: [master, main]
 
 jobs:
   build-rpm:
